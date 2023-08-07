@@ -4,9 +4,10 @@ import com.br.texo.apitexo.mensagens.Mensagens;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import java.net.URISyntaxException;
-
+//import io.restassured.RestAssured.*;
+//import		io.restassured.matcher.RestAssuredMatchers.*;
+import		org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
@@ -30,4 +31,6 @@ class ApiTexoApplicationTest {
 
 		assertEquals(Mensagens.MSN_PROBLEM_BY_OPEN_CSV, exception.getMessage().replace(":", "").trim());
 	}// verifyExceptionWhenOpenCsvFile
+
+
 }

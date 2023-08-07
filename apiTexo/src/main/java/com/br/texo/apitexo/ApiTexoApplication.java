@@ -3,6 +3,8 @@ package com.br.texo.apitexo;
 import com.br.texo.apitexo.entities.MovieEntity;
 import com.br.texo.apitexo.mensagens.Mensagens;
 import com.br.texo.apitexo.service.MovieService;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -42,6 +44,8 @@ public class ApiTexoApplication {
 	private static ApiTexoApplication configurableApplicationContext 		= null;
 	private Map<String, Integer> 	mapHeaderColumn 						= null;
 	private List<MovieEntity> 		movieEntityList							= null;
+
+	private Map<String, MovieEntity> movieEntityMapWinners					= null;
 
 	public static void main(String[] args)
 	{
@@ -123,14 +127,81 @@ public class ApiTexoApplication {
 		{
 			throw e;
 		}
-
-		System.out.println("list ovies size: "+this.movieEntityList.size());
 	}// loadCsvFile
 
 	@Bean
 	public void insertListMoviesIntoMovieTable()
 	{
 		movieService.saveAll(this.movieEntityList);
+	}
+
+	/**
+	 * Obtem os 50 primeiros registros, percorre o resultad, converte para Json e printa na tela o Json obtido
+	 */
+	@Bean
+	public void showMaxAndMinWinners()
+	{
+		this.movieEntityMapWinners = new HashMap<String, MovieEntity>();
+
+		movieService.findByWinner().forEach((obj)->{
+			String[] producers = obj.getProducers().split("\\s?,?\\s+(?i)and\\s|\\s?,\\s");
+
+			for (String productor:producers)
+			{
+				productor = productor.trim();
+				if(this.movieEntityMapWinners.get(productor) != null)
+				{
+					int o = this.movieEntityMapWinners.get(productor).getQtdWinners();
+					this.movieEntityMapWinners.get(productor).setQtdWinners(o + 1);
+
+					if (obj.getYear() > this.movieEntityMapWinners.get(productor).getGreaterDate()) {
+						this.movieEntityMapWinners.get(productor).setGreaterDate(obj.getYear());
+					}
+
+					if (obj.getYear() < this.movieEntityMapWinners.get(productor).getMinorDate()  ) {
+						this.movieEntityMapWinners.get(productor).setMinorDate(obj.getYear());
+					}
+					this.movieEntityMapWinners.get(productor).setDateInterval(this.movieEntityMapWinners.get(productor)
+							.getGreaterDate() - this.movieEntityMapWinners.get(productor)
+							.getMinorDate());
+				}
+				else
+				{
+					MovieEntity movieEntity1 = new MovieEntity();
+					movieEntity1.setProducers(productor);
+					movieEntity1.setQtdWinners(1);
+					movieEntity1.setStudio(obj.getStudio());
+					movieEntity1.setGreaterDate(obj.getYear());
+					movieEntity1.setMinorDate(obj.getYear());
+					this.movieEntityMapWinners.put(productor, movieEntity1);
+				}
+			}
+		});
+
+		Optional<MovieEntity> max = this.movieEntityMapWinners.values().stream().filter((oo)->{return oo.getQtdWinners() > 1;}).max(new Comparator<MovieEntity>()
+		{
+			@Override
+			public int compare(MovieEntity o1, MovieEntity o2)
+			{
+				if(o1 != null && o2 != null && o1.getDateInterval() > o2.getDateInterval())
+					return 1;
+				else
+					return -1;
+			}
+		}
+		);
+		Optional<MovieEntity> min = this.movieEntityMapWinners.values().stream().filter((oo)->{return oo.getQtdWinners() > 1;}).min(new Comparator<MovieEntity>()
+		{
+			 @Override
+			 public int compare(MovieEntity o1, MovieEntity o2) {
+				 if(o1 != null && o2 != null && o1.getDateInterval() > o2.getDateInterval())
+					 return 1;
+				 else
+					 return -1;
+
+			 }
+		}
+		);
 	}
 
 	/**
