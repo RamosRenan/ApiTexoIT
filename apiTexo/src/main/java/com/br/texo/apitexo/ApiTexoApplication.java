@@ -3,8 +3,6 @@ package com.br.texo.apitexo;
 import com.br.texo.apitexo.entities.MovieEntity;
 import com.br.texo.apitexo.mensagens.Mensagens;
 import com.br.texo.apitexo.service.MovieService;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVParser;
 import org.apache.commons.csv.CSVRecord;
@@ -16,7 +14,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -60,6 +57,8 @@ public class ApiTexoApplication {
 	@Bean
 	public void readCsvFile() throws IOException, URISyntaxException, Exception
 	{
+		System.out.println("user dir: "+System.getProperty("user.dir"));
+
 		this.movieEntityList =  new ArrayList<MovieEntity>();
 
 		String envSoName = "";
@@ -139,6 +138,9 @@ public class ApiTexoApplication {
 		}
 	}// loadCsvFile
 
+	/**
+	 * Responsavel por savar todos os registros encontrados no csv após traduzi-los para objetos movieentity
+	 */
 	@Bean
 	public void insertListMoviesIntoMovieTable()
 	{
