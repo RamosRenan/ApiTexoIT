@@ -61,9 +61,19 @@ public class ApiTexoApplication {
 	public void readCsvFile() throws IOException, URISyntaxException, Exception
 	{
 		this.movieEntityList =  new ArrayList<MovieEntity>();
+
+		String envSoName = "";
+
+		if(System.getProperty("os.name").toLowerCase().contains("windows"))
+			envSoName = "csvLocationWin";
+		else if (System.getProperty("os.name").toLowerCase().contains("linux"))
+			envSoName =  "csvLocationLin";
+		else
+			throw new RuntimeException("Não foi possível determinar o sistema operacioonal ...");
+
 		try
 		{
-			openCsvFile(propertiesOfApp.getProperty("csvLocation"));
+			openCsvFile(propertiesOfApp.getProperty(envSoName).replace("\\", "/").replace(" ", "%20"));
 
 			if (this.csvSucessLoaded)
 			{
@@ -214,15 +224,17 @@ public class ApiTexoApplication {
 	public void openCsvFile(String path) throws IllegalArgumentException, FileNotFoundException, URISyntaxException
 	{
 		ApiTexoApplication apiTexoApplication =  new ApiTexoApplication();
+
 		apiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT = path;
+
+		System.out.println(">>> path csv file: "+path);
 		try
 		{
 			if (!path.isBlank())
-				this.fileReader 	= new FileReader(new File(new URI("file", null, path, null)));
+				this.fileReader 	= new FileReader(new File(new URI("file:///" + path)));
 			else
-			{
-				this.fileReader 	= new FileReader(new File(new URI("file", null, apiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT, null)));
-			}
+				this.fileReader 	= new FileReader(new File(new URI("file:///" + apiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT)));
+
 			this.csvSucessLoaded 	= true;
 		}
 		catch (IllegalArgumentException e)
