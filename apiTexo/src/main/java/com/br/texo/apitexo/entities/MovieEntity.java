@@ -1,10 +1,7 @@
 package com.br.texo.apitexo.entities;
 
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import org.json.JSONObject;
-
 import javax.persistence.*;
 import java.time.LocalDate;
 

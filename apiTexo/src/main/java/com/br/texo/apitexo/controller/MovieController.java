@@ -2,7 +2,6 @@ package com.br.texo.apitexo.controller;
 
 import com.br.texo.apitexo.entities.MovieEntity;
 import com.br.texo.apitexo.service.MovieService;
-import org.json.JSONException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -33,7 +32,7 @@ public class MovieController
      * @return ist<MovieEntity>
      */
     @GetMapping(value = "/minAndMaxByDateMovie")
-    public ResponseEntity<Map<String, Object>> getMaxAndMinWinnersByDate() throws IOException, JSONException
+    public ResponseEntity<Map<String, Object>> getMaxAndMinWinnersByDate() throws IOException
     {
         this.minAndMaxWinners  = new HashMap<>();
 
