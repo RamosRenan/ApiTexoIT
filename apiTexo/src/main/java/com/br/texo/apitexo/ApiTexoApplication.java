@@ -35,7 +35,9 @@ public class ApiTexoApplication {
 
 	// variavel que valida se o arquivo csv foi carregado e lido corretamente
 	private boolean 		csvSucessLoaded 								= false;
-	private String 			PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT 	= ""  ;	// absolutePath: "/home/renan/desenvolvimento/workspace/api/texoIT/ApiTextoIT/apitexo/docs/movielist.csv";
+
+	// absolutePath para csv file
+	private static String 	PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT 	= ""  ;
 	private FileReader 		fileReader 										= null;
 	private MovieEntity     movieEntity 									= null;
 	private static ApiTexoApplication configurableApplicationContext 		= null;
@@ -46,10 +48,16 @@ public class ApiTexoApplication {
 
 	public static void main(String[] args)
 	{
+		System.out.println(">> Path csv informado: "+args[0]);
+
+		// obtem argumento(path to csv file) informado pelo usuário
+		if(args != null && args.length > 0 && new File(args[0]).isFile())
+			ApiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT = args[0].replace("\\", "/").replace(" ", "%20");
+
 		ApplicationContext configurableApplicationContext_1 =  SpringApplication.run(ApiTexoApplication.class, args);
 
 		ApiTexoApplication.configurableApplicationContext = configurableApplicationContext_1.getBean(ApiTexoApplication.class);
-	}
+	}// main
 
 	/**
 	 * Responsável por carregar o arquivo csv
@@ -72,7 +80,10 @@ public class ApiTexoApplication {
 
 		try
 		{
-			openCsvFile(propertiesOfApp.getProperty(envSoName).replace("\\", "/").replace(" ", "%20"));
+			if (!ApiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT.isEmpty())
+				openCsvFile(ApiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT);
+			else
+				openCsvFile((System.getProperty("user.dir") + propertiesOfApp.getProperty(envSoName)).replace("\\", "/").replace(" ", "%20"));
 
 			if (this.csvSucessLoaded)
 			{
@@ -89,25 +100,27 @@ public class ApiTexoApplication {
 				this.mapHeaderColumn = new HashMap<String, Integer>();
 
 				int index 	= 0;
-				String sss 	= "";
-				for (Object ss : csvMovieList.getHeaderNames().toArray())
+
+				String comlumns 	= "";
+
+				for (Object column : csvMovieList.getHeaderNames().toArray())
 				{
-					switch (sss = ((String) ss).toLowerCase())
+					switch (comlumns = ((String) column).toLowerCase())
 					{
 						case "year":
-							mapHeaderColumn.put(sss, index++);
+							mapHeaderColumn.put(comlumns, index++);
 							break;
 						case "title":
-							mapHeaderColumn.put(sss, index++);
+							mapHeaderColumn.put(comlumns, index++);
 							break;
 						case "studios":
-							mapHeaderColumn.put(sss, index++);
+							mapHeaderColumn.put(comlumns, index++);
 							break;
 						case "producers":
-							mapHeaderColumn.put(sss, index++);
+							mapHeaderColumn.put(comlumns, index++);
 							break;
 						case "winner":
-							mapHeaderColumn.put(sss, index++);
+							mapHeaderColumn.put(comlumns, index++);
 							break;
 						default:
 							throw new Exception(Mensagens.MSN_INCONSISTENCE_CSV_HEADER);
@@ -148,7 +161,7 @@ public class ApiTexoApplication {
 	}
 
 	/**
-	 * Obtem os 50 primeiros registros, percorre o resultad, converte para Json e printa na tela o Json obtido
+	 * Responsável por apresentar o produtor que ganhou no menor e maior tempo
 	 */
 	@Bean
 	public void showMaxAndMinWinners()
@@ -225,17 +238,10 @@ public class ApiTexoApplication {
 	 */
 	public void openCsvFile(String path) throws IllegalArgumentException, FileNotFoundException, URISyntaxException
 	{
-		ApiTexoApplication apiTexoApplication =  new ApiTexoApplication();
-
-		apiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT = path;
-
 		System.out.println(">>> path csv file: "+path);
 		try
 		{
-			if (!path.isBlank())
-				this.fileReader 	= new FileReader(new File(new URI("file:///" + path)));
-			else
-				this.fileReader 	= new FileReader(new File(new URI("file:///" + apiTexoApplication.PATH_UNIFORM_RESOURCE_IDENTIFIER_CSV_DEFAULT)));
+			this.fileReader 	= new FileReader(new File(new URI("file:///" + path)));
 
 			this.csvSucessLoaded 	= true;
 		}

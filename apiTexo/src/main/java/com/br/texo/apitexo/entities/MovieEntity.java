@@ -165,8 +165,8 @@ public class MovieEntity
 
         jsonNodes.put("producer",       this.getProducers());
         jsonNodes.put("interval",       this.getDateInterval());
-        jsonNodes.put("previousWin",    this.getGreaterDate());
-        jsonNodes.put("followingWin",   this.getMinorDate());
+        jsonNodes.put("previousWin",    this.getMinorDate());
+        jsonNodes.put("followingWin",   this.getGreaterDate());
 
         return jsonNodes;
     }// toJsonObject
