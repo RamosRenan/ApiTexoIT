@@ -1,0 +1,53 @@
+/*
+  envolve menu sidenav
+  menu lateral esquerdo
+  até 600px depois componente é ocultado
+*/
+.div-wrap-menu-sidenav
+{
+  width: 22.5%;
+  min-height: 99%;
+  border: 1px solid gray;
+  position: absolute;
+  z-index: 999;
+  display: block;
+}
+
+/*
+  .div-wrap-menu-sidenav: escondo elemente menu esquerdo
+*/
+@media (max-width:600px)
+{
+  .div-wrap-menu-sidenav
+  {
+    display: none;
+  }
+
+  p
+  {color: red;}
+}
+
+
+
+/*
+  envolve menu sidenav
+  menu topo
+  até 600px depois componente é apresentado
+*/
+.div-wrap-menu-sidenav-top
+{
+  width: 99.9%;
+  min-height: 12%;
+  border: 1px solid gray;
+  position: absolute;
+  z-index: 998;
+  visibility: hidden;
+}
+
+@media(max-width:600px)
+{
+  .div-wrap-menu-sidenav-top
+  {
+    visibility: visible;
+  }
+}
