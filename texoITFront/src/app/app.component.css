@@ -1,53 +1,87 @@
-/*
-  envolve menu sidenav
-  menu lateral esquerdo
-  até 600px depois componente é ocultado
-*/
-.div-wrap-menu-sidenav
+.app-body
 {
-  width: 22.5%;
-  min-height: 99%;
-  border: 1px solid gray;
-  position: absolute;
-  z-index: 999;
-  display: block;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: white;
 }
 
-/*
-  .div-wrap-menu-sidenav: escondo elemente menu esquerdo
-*/
-@media (max-width:600px)
+.menu
 {
-  .div-wrap-menu-sidenav
+  width: 22.3%;
+  height: 100vh;
+  display: inline-flex;
+  background-color: whitesmoke;
+  text-align: center;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.app-body-content
+{
+  display: inline-flex;
+  width: 100%;
+  height: auto;
+  background-color: inherit;
+}
+
+.render-views
+{
+  width: 100%;
+  height: auto;
+  background-color: inherit;
+  /* position: absolute; */
+}
+
+@media(max-width:800px)
+{
+  .app-body
   {
-    display: none;
+    display: block;
   }
 
-  p
-  {color: red;}
-}
-
-
-
-/*
-  envolve menu sidenav
-  menu topo
-  até 600px depois componente é apresentado
-*/
-.div-wrap-menu-sidenav-top
-{
-  width: 99.9%;
-  min-height: 12%;
-  border: 1px solid gray;
-  position: absolute;
-  z-index: 998;
-  visibility: hidden;
-}
-
-@media(max-width:600px)
-{
-  .div-wrap-menu-sidenav-top
+  .menu
   {
-    visibility: visible;
+    width: 100%;
+    display: block;
+    z-index: 999;
+    height: auto;
+  }
+
+  .app-body-content
+  {
+    display: block;
+    position: relative;
+  }
+
+  .render-views
+  {
+    width:  100% ;
+  }
+
+  .footer-component
+  {
+    /* display: none; */
   }
 }
+
+ul, li, a
+{
+  text-decoration: none;
+  text-align: center;
+  list-style: none;
+  align-items: center;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.links:hover
+{
+  font-size: 15px;
+  color: blue;
+}
+
+
+
+
+

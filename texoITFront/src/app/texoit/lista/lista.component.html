@@ -1,0 +1,56 @@
+<div style="" class="body-list" id="dash_list">
+  <!-- List movies -->
+  <div style="" class="box-tables" id="">
+    <h2 style="text-align: left;"> List movies </h2>
+
+    <!-- wrap table -->
+    <div style="width: 100%; min-height: 50px; background-color: transparent;">
+      <table style="text-align: center; background-color: white; width: 100%; height: inherit;">
+        <!-- columns -->
+          <!-- table header -->
+          <tr>
+            <!-- id -->
+            <th>ID</th>
+
+            <!-- title -->
+            <th>
+              Title
+            </th>
+
+            <!--  Year -->
+            <th>
+              <form class="example-form" style="margin: auto; width: 50%; background-color: transparent;">
+                <label for="filterByYear">Year</label><br>
+                <input (keyup)="updateByYear($event)" value="" type="number" id="filterByYear" style="width: 90%; height: 25px; border-radius: 3px; border: 1px solid lightgray;">
+              </form>
+            </th>
+
+            <!-- winner -->
+            <th>
+              <form class="example-form" style="margin: auto; width: 50%; background-color: transparent;">
+                <label for="filterByYear">Winner ?</label><br>
+                <select (change)="updateByWinner()" id="filterByWinner" style="width: 90%; height: 25px; border-radius: 3px; border: 1px solid lightgray; background-color: transparent;">
+                  <option [defaultSelected]="true" value=""></option>
+                  <option value="yes">yes</option>
+                  <option value="no">no</option>
+                </select>
+              </form>
+            </th>
+          </tr>
+          <!-- table header -->
+        <!-- columns -->
+
+        <tr *ngFor="let movie of listMovies | paginate:{itemsPerPage:itemsPerPage, currentPage:p}">
+          <td>{{movie.id}}</td>
+          <td>{{movie.title}}</td>
+          <td>{{movie.year}}</td>
+          <td>{{movie.winner}}</td>
+        </tr>
+      </table>
+
+      <!-- page number controls -->
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    </div>
+    <!-- wrap table -->
+  </div>
+</div>

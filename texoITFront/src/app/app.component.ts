@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatCardModule} from '@angular/material/card';
 
 
 @Component({
@@ -10,4 +13,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 export class AppComponent
 {
   showFiller = false;
+
+  ngOnInit()
+  {
+
+  }
 }
+

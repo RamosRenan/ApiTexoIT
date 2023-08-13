@@ -1,0 +1,62 @@
+.body-dashboard
+{
+  display: table;
+  width: 100%;
+  height: auto;
+  background-color: inherit;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.box-tables
+{
+  width: 47%;
+  min-height: 200px;
+  background-color: rgb(255, 255, 255);
+  display: inline-table;
+  margin: 5px ;
+  box-shadow: -1px 2px 8px -3px rgb(123, 123, 123);
+  padding: 5px;
+}
+
+.footer-dashboard
+{
+  display: none;
+}
+
+@media(max-width:800px)
+{
+  .body-dashboard
+  {
+    display: contents;
+  }
+
+  .year-multiple-winners
+  {
+    display: block;
+    width: 99%;
+  }
+
+
+}
+
+@media(max-width:666px)
+{
+  .box-tables
+  {
+    width: 96%;
+  }
+}
+
+tr:nth-child(even)
+{
+  background-color: whitesmoke;
+}
+
+ td
+{
+  border-bottom: 1px solid rgb(187, 187, 187);
+}
