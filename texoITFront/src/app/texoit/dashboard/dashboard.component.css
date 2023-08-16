@@ -60,3 +60,9 @@ tr:nth-child(even)
 {
   border-bottom: 1px solid rgb(187, 187, 187);
 }
+
+.mat-stroked-button:hover
+{
+  background-color: rgb(239, 239, 239);
+  transition: background-color 1s;
+}

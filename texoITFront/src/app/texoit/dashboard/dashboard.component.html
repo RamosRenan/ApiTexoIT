@@ -12,21 +12,10 @@
           <th>Win Count</th>
         </tr>
 
-        <tr>
-          <td>55</td>
-          <td>88</td>
+        <tr *ngFor="let movies of listYearsWithMultipleWinners">
+          <td>{{movies.year}}</td>
+          <td>{{movies.winnerCount}}</td>
         </tr>
-
-        <tr>
-          <td>55</td>
-          <td>88</td>
-        </tr>
-
-        <tr>
-          <td>55</td>
-          <td>88</td>
-        </tr>
-
       </table>
     </div>
   </div>
@@ -40,20 +29,14 @@
     <div style="width: 100%; min-height: 50px; background-color: transparent;">
       <table style="text-align: center; background-color: transparent; width: 100%; height: inherit;">
         <tr>
-          <th>Year</th>
+          <th>Name</th>
           <th>Win Count</th>
         </tr>
 
-        <tr>
-          <td>55</td>
-          <td>88</td>
+        <tr *ngFor="let movies of top3StudiosWithWinners">
+          <td>{{movies.name}}</td>
+          <td>{{movies.winCount}}</td>
         </tr>
-
-        <tr>
-          <td>55</td>
-          <td>88</td>
-        </tr>
-
       </table>
     </div>
   </div>
@@ -68,13 +51,17 @@
       <h5 style="text-align: left;">Maximum</h5>
       <table style="text-align: center; background-color: transparent; width: 100%; height: inherit;">
         <tr>
-          <th>Year</th>
-          <th>Win Count</th>
+          <th>Producer</th>
+          <th>Interval</th>
+          <th>Previous Year</th>
+          <th>Following Year</th>
         </tr>
 
         <tr>
-          <td>55</td>
-          <td>88</td>
+          <td>{{maxWinner.producer}}</td>
+          <td>{{maxWinner.interval}}</td>
+          <td>{{maxWinner.previousWin}}</td>
+          <td>{{maxWinner.followingWin}}</td>
         </tr>
 
       </table>
@@ -87,13 +74,17 @@
       <h5 style="text-align: left;">Minimum</h5>
       <table style="text-align: center; background-color: transparent; width: 100%; height: inherit;">
         <tr>
-          <th>Year</th>
-          <th>Win Count</th>
+          <th>Producer</th>
+          <th>Interval</th>
+          <th>Previous Year</th>
+          <th>Following Year</th>
         </tr>
 
         <tr>
-          <td>55</td>
-          <td>88</td>
+          <td>{{minWinner.producer}}</td>
+          <td>{{minWinner.interval}}</td>
+          <td>{{minWinner.previousWin}}</td>
+          <td>{{minWinner.followingWin}}</td>
         </tr>
 
       </table>
@@ -108,15 +99,19 @@
 
     <!-- div wrap table -->
     <div style="width: 100%; min-height: 50px; background-color: transparent;">
+      <input type="search" class="form-control" placeholder="Search by year" value="Search by year" [(ngModel)]="searchByYear" style="width:80%; height:25px;"  >
+      <button (click)="listMovieWinnerByYear()" mat-stroked-button class="mat-stroked-button" style="height: 35px; margin-top: -3px; color: black; border: solid 1px rgb(227, 227, 227);">Search</button>
       <table style="text-align: center; background-color: transparent; width: 100%; height: inherit;">
         <tr>
+          <th>ID</th>
           <th>Year</th>
-          <th>Win Count</th>
+          <th>Title</th>
         </tr>
 
-        <tr>
-          <td>55</td>
-          <td>88</td>
+        <tr *ngFor="let winnersByYear of listWinnersByYear">
+          <td>{{winnersByYear.id}}</td>
+          <td>{{winnersByYear.year}}</td>
+          <td>{{winnersByYear.title}}</td>
         </tr>
 
       </table>

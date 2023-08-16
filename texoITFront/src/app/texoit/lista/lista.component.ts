@@ -54,8 +54,6 @@ export class ListaComponent
 
   updateByWinner()
   {
-    console.log("selected ...");
-
     let winner = (document.getElementById("filterByWinner") as HTMLSelectElement).value;
     if(winner.length > 0 && winner != "")
     {

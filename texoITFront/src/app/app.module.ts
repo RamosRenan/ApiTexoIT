@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ListaService } from './texoit/service/lista/lista.service';
 import { HttpClientModule } from '@angular/common/http';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatFormFieldModule,
     FormsModule,
     NgxPaginationModule,
-    HttpClientModule
+    HttpClientModule,
+    MatButtonModule
   ],
   providers: [ListaService],
   bootstrap: [AppComponent]
