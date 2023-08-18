@@ -75,6 +75,6 @@ tecnologias e ferramentas utilizadas no teste
 
 # Contatos
 ### Email:  `renan.barbosards@gmail.com`
-### GitHub: `https://github.com/RamosRenan)https://github.com/RamosRenan`
+### GitHub: `https://github.com/RamosRenan`
 ### Whats:  `41 9 9261-7568`
 
