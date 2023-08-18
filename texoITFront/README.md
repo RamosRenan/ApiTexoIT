@@ -1,11 +1,21 @@
+# Sistema Operacional
+Este projeto poderá ser executado em Windows10+ ou Ubuntu 20+
+
+# Hardware
+Recomendado: 8GB RAM
+
+# Editor de texto utilizado
+Recomendado: Você poderá utilizar qualquer editor de sua preferência, mas considerando disponibildiade de recursos disponíveis, recomenda-se utilizar o VsCode 
+
 # TexoITFrontEnd
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
+Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
 ## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
+ - Abra a raiz projeto em um editor de texto ou em terminal
+ - Execute `ng serve` para o servidor de desenvolvimento. Navegue para `http://localhost:4200/`. 
+ - Acesse: `http://localhost:4200/`
+ * Obs: se a porta estiver sendo utilizada execute o comando ng serve --host=0.0.0.0 (*Apenas em desenvolcimento*) --port=8585
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
