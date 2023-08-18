@@ -1,7 +1,6 @@
-import { HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClient, HttpHandler, HttpResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, Subscriber } from 'rxjs';
-
+import { Observable } from 'rxjs';
 
 const URL_TEXOAPI = "https://tools.texoit.com/backend-java/api/movies?page=1&size=2&";
 
@@ -23,12 +22,25 @@ export class ListaService
     this.httpClient = httpClient;
   }
 
-  public listAndPeageMovies():Observable<Object>
+  /**
+   * @description Ao acessar a tela de listagem pela primeira vez,
+   * o usuário terá acesso a uma lista padrão
+   *
+   * @returns Observable< any>
+   */
+  public listAndPeageMovies():Observable< any>
   {
+    console.log(">>>url: "+URL_TEXOAPI+DEFAULT_FILTERS_MOVIES);
+
     return this.httpClient.get(URL_TEXOAPI+DEFAULT_FILTERS_MOVIES);
   }
 
-  public listMoviesByFiltersYear(year:number):Observable<Object>
+  /**
+   * @description Lista filmes por ano
+   *
+   * @returns Observable< any>
+   */
+  public listMoviesByFiltersYear(year:number):Observable< any>
   {
     this.year = year;
 
@@ -38,7 +50,12 @@ export class ListaService
     return this.httpClient.get(URL_TEXOAPI+"winner="+this.winner+"&"+"year="+this.year);
   }
 
-  public listMoviesByFiltersWinner(winner:string):Observable<Object>
+  /**
+   * @description Lista filmes por vencedores
+   *
+   * @returns Observable< any>
+   */
+  public listMoviesByFiltersWinner(winner:string):Observable< any>
   {
     this.winner = winner;
 

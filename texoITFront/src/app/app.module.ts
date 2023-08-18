@@ -18,12 +18,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ListaService } from './texoit/service/lista/lista.service';
 import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
+import { DashboardService } from './texoit/service/dashboard/dashboard.service';
+import { ModalalertComponent } from './texoit/general/modalalert/modalalert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    ListaComponent
+    ListaComponent,
+    ModalalertComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,7 @@ import { MatButtonModule } from '@angular/material/button';
     HttpClientModule,
     MatButtonModule
   ],
-  providers: [ListaService],
+  providers: [ListaService, DashboardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

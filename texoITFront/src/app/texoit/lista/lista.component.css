@@ -37,3 +37,8 @@ tr:nth-child(even)
 {
   border-bottom: 1px solid rgb(187, 187, 187);
 }
+
+app-modalalert
+{
+  display: none;
+}

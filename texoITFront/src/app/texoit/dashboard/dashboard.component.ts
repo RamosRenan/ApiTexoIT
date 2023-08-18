@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
-import {MatTableDataSource, MatTableModule} from '@angular/material/table';
-import { DashboardService } from '../service/dashborad/dashboard.service';
+import { DashboardService } from '../service/dashboard/dashboard.service';
 import { MultipleWinnersInterface } from '../interfaces/dashboard/multiple-winners.interface';
 import { StudiosWithWinnersInterface } from '../interfaces/dashboard/studios-with-winners.interface';
 import { MinAndMaxWinnersInterface } from '../interfaces/dashboard/min-and-max-winners.interface';
@@ -30,25 +28,67 @@ export class DashboardComponent
 
   ngOnInit()
   {
+    this.listYearsWithMultipleWinnersFn();
+
+    this.listTop3StudiosWithWinners();
+
+    this.listMinAndMaxWinners();
+  }// ngOnInit
+
+  /**
+   *
+   * @description List years with multiple winners
+   */
+  listYearsWithMultipleWinnersFn():void
+  {
     this.dashboardService.listYearsWithMultipleWinners().subscribe(value=>{
-      this.listYearsWithMultipleWinners = JSON.parse(JSON.stringify(value)).years as MultipleWinnersInterface[];
+      console.log(value);
+
+      this.listYearsWithMultipleWinners = JSON.parse(JSON.stringify(value))
+      .years as MultipleWinnersInterface[];
     });
+  }
 
+  /**
+   * @description listTop3StudiosWithWinners
+   */
+  listTop3StudiosWithWinners()
+  {
     this.dashboardService.listTop3StudiosWithWinners().pipe().subscribe(value=>{
-      this.top3StudiosWithWinners = JSON.parse(JSON.stringify(value)).studios as StudiosWithWinnersInterface[];
+      console.log(value);
 
-      this.sortedDescStudio(this.top3StudiosWithWinners);
+      this.top3StudiosWithWinners = JSON.parse(JSON.stringify(value))
+      .studios as StudiosWithWinnersInterface[];
+
+      // ja vem sorteado em desc
+      // this.sortedDescStudio(this.top3StudiosWithWinners);
+
+      console.log(this.top3StudiosWithWinners);
 
       this.top3StudiosWithWinners = this.top3StudiosWithWinners.slice(0,3);
     });
+  }
 
+  /**
+   * @description  Producers with longest interval between wins
+  */
+  listMinAndMaxWinners()
+  {
     this.dashboardService.listMinAndMaxWinners().subscribe((value)=>{
+      console.log(value);
+
+
       this.minWinner = JSON.parse(JSON.stringify(value)).min[0];
 
       this.maxWinner = JSON.parse(JSON.stringify(value)).max[0];
     });
-  }// ngOnInit
+  }
 
+  /**
+   * @description Ordena os estudios em ordem decrescente
+   * @param studiosWithWinnersInterface
+   * @returns
+   */
   private sortedDescStudio(studiosWithWinnersInterface:StudiosWithWinnersInterface[]):StudiosWithWinnersInterface[]
   {
     return studiosWithWinnersInterface.sort((a, b):number=>{
@@ -61,9 +101,14 @@ export class DashboardComponent
     });
   }
 
+  /**
+   * @description List movie winners by year
+   */
   listMovieWinnerByYear()
   {
     this.dashboardService.listMovieWinnerByYear(this.searchByYear).subscribe(value=>{
+      console.log(value);
+
       this.listWinnersByYear = JSON.parse(JSON.stringify(value)) as WinnersByYearInterface[];
     });
   }

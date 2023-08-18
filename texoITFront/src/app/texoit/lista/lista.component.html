@@ -40,7 +40,7 @@
           <!-- table header -->
         <!-- columns -->
 
-        <tr *ngFor="let movie of listMovies | paginate:{itemsPerPage:itemsPerPage, currentPage:p}">
+        <tr *ngFor="let movie of listMovies | paginate:{itemsPerPage:itemsPerPage, currentPage:pagination}">
           <td>{{movie.id}}</td>
           <td>{{movie.title}}</td>
           <td>{{movie.year}}</td>
@@ -49,8 +49,11 @@
       </table>
 
       <!-- page number controls -->
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      <pagination-controls (pageChange)="pagination = $event"></pagination-controls>
     </div>
     <!-- wrap table -->
+
+    <!-- card informativo apresentado quando a api não retornar valores ou erro de conexão -->
+    <app-modalalert id="app-modalalert"></app-modalalert>
   </div>
 </div>

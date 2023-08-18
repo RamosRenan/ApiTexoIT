@@ -66,3 +66,10 @@ tr:nth-child(even)
   background-color: rgb(239, 239, 239);
   transition: background-color 1s;
 }
+
+app-modalalert
+{
+  position: absolute;
+  background-color: blue;
+  z-index: 998;
+}
