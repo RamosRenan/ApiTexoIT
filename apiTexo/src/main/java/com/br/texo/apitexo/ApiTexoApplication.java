@@ -48,7 +48,8 @@ public class ApiTexoApplication {
 
 	public static void main(String[] args)
 	{
-		System.out.println(">> Path csv informado: "+args[0]);
+		if(args.length > 0)
+			System.out.println(">> Path csv informado: "+args[0]);
 
 		// obtem argumento(path to csv file) informado pelo usuário
 		if(args != null && args.length > 0 && new File(args[0]).isFile())
