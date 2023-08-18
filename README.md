@@ -11,7 +11,7 @@ Introdução
 - Teste Texo IT FullStack. Desenvolvimento de duas aplicações uma sendo front end para consumir
 serviços de uma api e outra aplicação back end para disponibilizar um serviço baseado em api web. 
 
-quais modalidades testes serão reaizados
+quais modalidades de testes serão realizados
 - Testes unitários e de integração
 
 quais partes do sistema são contemplados
