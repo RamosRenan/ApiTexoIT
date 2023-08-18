@@ -58,3 +58,20 @@ tecnologias e ferramentas utilizadas no teste
          alt="" width="130" height="50">
 </figure>
 
+<figure>
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/fba04284-ae7d-4399-ac23-9d4e64ddc567"
+         alt="" width="130" height="50">
+</figure>
+
+<figure>
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/b18315ad-f6c0-4798-8559-b58db029b1c1"
+         alt="" width="130" height="50">
+</figure>
+
+<figure>
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/f1f862b2-eaad-4bce-b735-9ddc12acff18"
+         alt="" width="130" height="50">
+</figure>
+
+
+
