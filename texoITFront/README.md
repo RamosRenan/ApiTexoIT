@@ -10,7 +10,7 @@ WINDOWS10+
  - https://nodejs.org/en
 executar node --version
 
-Ubuntu 20+
+UBUNTU 20+
 sudo apt update
 sudo apt install nodejs
 executar node --version
