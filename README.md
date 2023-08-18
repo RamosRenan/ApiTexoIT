@@ -73,5 +73,8 @@ tecnologias e ferramentas utilizadas no teste
          alt="" width="130" height="50">
 </figure>
 
-
+# Contatos
+### `renan.barbosards@gmail.com`
+### `(https://github.com/RamosRenan)https://github.com/RamosRenan`
+### `41 9 9261-7568`
 
