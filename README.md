@@ -5,7 +5,7 @@ api teste texto
 ## Documentação Back end: https://github.com/RamosRenan/ApiTextoIT/blob/main/apiTexo/README.md
 
 
-# Estratégia de teste
+# Resume
 
 Introdução
 - Teste Texo IT  
