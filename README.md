@@ -11,17 +11,18 @@ Introdução
 - Teste Texo IT FullStack. Desenvolvimento de duas aplicações uma sendo front end para consumir
 serviços de uma api e outra aplicação back end para disponibilizar um serviço baseado em api web. 
 
-quais modalidades de testes serão realizados
+Modalidades de testes serão realizados
 - Testes unitários e de integração
 
 Funcionalidades contempladas com testes de software 
 - Front End: Todos os serviços que contemplam as funcionalidades do sistema
 - Back End: Camada de serviço e requisições restfull com teste unitário e rest assured 
 
-tecnologias e ferramentas utilizadas no teste
+Tecnologias e ferramentas utilizadas no teste
 - Karma
 - Jasmine
 - JUnit
+- Rest assured
 
 # Tecnologias utilizadas
 <figure>
