@@ -14,8 +14,9 @@ serviços de uma api e outra aplicação back end para disponibilizar um serviç
 quais modalidades de testes serão realizados
 - Testes unitários e de integração
 
-quais partes do sistema são contemplados
-- Font End: Todos os serviços que contemplam as funcionalidades do sistema
+Funcionalidades contempladas com testes de software 
+- Front End: Todos os serviços que contemplam as funcionalidades do sistema
+- Back End: Camada de serviço e requisições restfull com teste unitário e rest assured 
 
 tecnologias e ferramentas utilizadas no teste
 - Karma
