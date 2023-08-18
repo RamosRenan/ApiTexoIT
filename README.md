@@ -1,6 +1,8 @@
 # ApiTextoIT
 api teste texto
 
+# Documentação frontend: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
+
 # Estratégia de teste
 
   Introdução
