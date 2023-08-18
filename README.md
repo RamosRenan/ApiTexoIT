@@ -7,16 +7,16 @@ api teste texto
 
 # Estratégia de teste
 
-  Introdução
-    - Teste Texo IT  
-  
-  quais modalidades testes serão reaizados
-    - Testes unitários e de integração
+Introdução
+- Teste Texo IT  
 
-  quais partes do sistema são contemplados
-    - Font End: Todos os serviços que contemplam as funcionalidades do sistema
+quais modalidades testes serão reaizados
+- Testes unitários e de integração
 
-  tecnologias e ferramentas utilizadas no teste
-  - Karma
-  - Jasmine
-  - JUnit
+quais partes do sistema são contemplados
+- Font End: Todos os serviços que contemplam as funcionalidades do sistema
+
+tecnologias e ferramentas utilizadas no teste
+- Karma
+- Jasmine
+- JUnit
