@@ -11,17 +11,24 @@ WINDOWS10+
 executar node --version
 
 UBUNTU 20+
-sudo apt update
-sudo apt install nodejs
-executar node --version
+- `sudo apt update`
+- `sudo apt install nodejs`
+- executar: `node --version`
 
 # Passo 2 
 ### Instalar o npm
-npm é parte do pacote de instalação do nodejs (meio oficial: https://nodejs.org/en) 
+- npm é parte do pacote de instalação do nodejs (meio oficial: https://nodejs.org/en) 
 
 # Passo 3
 Abra a raiz do projeto em um editor de texto ou em um terminal
-Execute o comando `npm install`
+- Execute o comando:  `npm install`
+
+# Passo 3
+Instalar o angular cli se não houver instalado
+- Executar ng v
+- se não estiver instalado
+- Executar `npm install -g @angular/cli`
+- Execute o comando:  `npm install`
 
 # Passo 4
 Execute o projeto `ng serve`
@@ -37,7 +44,7 @@ Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli
  - Acesse: `http://localhost:8585/`
 
 ## Testando o Software e rodando testes unitários
-Execute `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Execute `ng test` para executar testes de unidade via [Karma](https://karma-runner.github.io).
 
 ## Contatos
 ### `renan.barbosards@gmail.com`
