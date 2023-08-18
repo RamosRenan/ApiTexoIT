@@ -1,7 +1,7 @@
 # ApiTextoIT
 api teste texto
 
-## Documentação front end: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
+## Documentação Front end: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
 ## Documentação Back end: https://github.com/RamosRenan/ApiTextoIT/blob/main/apiTexo/README.md
 
 
