@@ -40,7 +40,7 @@ Recomendado: Você poderá utilizar qualquer editor de sua preferência, mas con
 Este projeto foi gerado com [Angular CLI](https://github.com/angular/angular-cli) version 16.1.8.
 
 ## Development server
- * Obs: se a porta estiver sendo utilizada execute o comando ng serve --host=0.0.0.0 (*Apenas em desenvolcimento*) --port=8585
+ * Obs: se a porta estiver sendo utilizada execute o comando ng serve --host=0.0.0.0 (*Apenas em desenvolcimento*) --port=8585 (ou outra porta desocupada)
  - Acesse: `http://localhost:8585/`
 
 ## Testando o Software e rodando testes unitários
