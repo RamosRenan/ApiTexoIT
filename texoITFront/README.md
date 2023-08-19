@@ -1,5 +1,8 @@
 # 🗞️ Documentação Front End
 
+## ✒️ Introdução.
+Este é um projeto desenvolvido com base no framework angular que permite visualizar filmes e produtores premiados, dispostos em widgets em tela, a partir do retorno da API endereçada em https://tools.texoit.com/backend-java/api/movies.
+
 # Sistema Operacional
 Este projeto pode ser executado em Windows10+ ou Ubuntu 20+.
 
