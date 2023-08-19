@@ -1,4 +1,4 @@
-# ApiTexoIT
+# Api TexoIT
 Projeto Full Stack API RestFull and FrontAnd
 
 ## Documentação Front End: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
@@ -7,17 +7,18 @@ Projeto Full Stack API RestFull and FrontAnd
 # Resumo
 
 Introdução
-- Teste Texo IT FullStack. Desenvolvimento de duas aplicações uma sendo front end para consumir
-serviços de uma api e outra aplicação back end para disponibilizar um serviço baseado em api web. 
+- Teste Texo I.T. FullStack para desenvolvimento de duas aplicações: uma front end para consumir
+serviços de uma api, e outra aplicação back end para disponibilizar um serviço baseado em api restfull. 
 
-Modalidades de testes serão realizados
-- Testes unitários e de integração
+Modalidades de testes que serão realizados:
+- Teste unitário;
+- Teste de integração.
 
-Funcionalidades contempladas com testes de software 
-- Front End: Todos os serviços que contemplam as funcionalidades do sistema
-- Back End: Camada de serviço e requisições restfull com teste unitário e rest assured 
+Funcionalidades contempladas com testes de software:
+- Front End: Serviços que contemplam as funcionalidades do sistema.
+- Back End: Serviços e requisições restfull com teste unitário e rest assured.
 
-Tecnologias e ferramentas utilizadas no teste
+Tecnologias e ferramentas utilizadas nos testes:
 - Karma
 - Jasmine
 - JUnit
