@@ -1,7 +1,7 @@
-# Documentação Front End
+# 🗞️ Documentação Front End
 
 # Sistema Operacional
-Este projeto poderá ser executado em Windows10+ ou Ubuntu 20+
+Este projeto pode ser executado em Windows10+ ou Ubuntu 20+.
 
 # Hardware
 Recomendado: 8GB RAM
@@ -25,14 +25,14 @@ UBUNTU 20+
 Abra a raiz do projeto em um editor de texto ou em um terminal
 - Execute o comando:  `npm install`
 
-# Passo 3
+# Passo 4
 Instalar o angular cli se não houver instalado
 - Executar ng v
 - se não estiver instalado
 - Executar `npm install -g @angular/cli`
 - Execute o comando:  `npm install`
 
-# Passo 4
+# Passo 5
 Execute o projeto `ng serve`
 
 # Editor de texto utilizado
