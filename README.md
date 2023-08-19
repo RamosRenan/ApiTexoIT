@@ -1,5 +1,5 @@
 # Api TexoIT
-Projeto Full Stack API RestFull and FrontAnd
+Projeto Full Stack API RestFull e FrontEnd
 
 ## Documentação Front End: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
 ## Documentação Back End: https://github.com/RamosRenan/ApiTextoIT/blob/main/apiTexoBack/README.md
