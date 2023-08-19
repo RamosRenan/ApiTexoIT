@@ -65,5 +65,22 @@ Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-
 - 1 Executar a aplicação, run `ApiTexoApplication.java`, aguarde a inicialização completa.
 - 2 Executar a classe de teste, run 'ApiTexoApplicationTest.java', os testes serão executados.
 
+## ☣️ Problemas conhecidos e possíveis soluções
 
+### IDE IntelliJ build o projeto sobreecrevendo o build maven realizado manualmente
+- Problema: *org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.br.texo.apitexo.ApiTexoApplication]; nested exception is java.io.FileNotFoundException: class path resource [config.properties] cannot be opened because it does not exist*
+  
+- Solução:
+- 1 Botão direito do mouse sobre o projeto
+- Selecinar project settings
+- Selecionar Modules
+- Desmarcar para deletar a pasta target
+- Excluir a pasta **target** e executar o maven novamente
+ 
+### Execução dos testes falham ao executa-los na IDE IntelliJ
+- Solução: 
+- 1 Botão direito do mouse sobre o projeto
+- Selecinar project settings
+- Selecionar Libraries
+- Excluir: Maven: org.apache.groovy:groovy-xml:4.0.112, Maven: org.apache.groovy:groovy:4.0.112
 
