@@ -49,7 +49,7 @@ O projeto acompanha um folder chamado docs, nele se encontra o arquivo default d
 🗒️ `Em ../docs/.. Substitua o arquivo csv`  <p></p>
 📓 Para realizar os testes de integração considerando um cenário específico com dados de entrada (arquivo csv fornecido) aplicando uma lógica que possa atender dados de entrada difentes, mas pertecente ao mesmo escopo de natureza e domínio, espera-se que a lógica se mantenha resiliente e consistente para dados de entrada diferentes dos considerados. Arquivo csv fornecido. Logo para que seja possível realizar os testes de integração foi considerado este arquivo como modelo de dados de entrada. Para tanto embora que se espere a manutenção do funcionamento da aplicação as fases de teste poderão ser afetadas uma vez substituído este arquivo.
 
-   
+#
 ### Modo 2: A partir do .jar
 Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-SNAPSHOT` (projeto compilado)
 - Certifique-se de que o JAVA_HOME foi apontado nas variáveis de ambiente.
@@ -58,13 +58,14 @@ Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-
      <p></p>
   &nbsp;&nbsp;&nbsp;&nbsp; 📓 Se o path do csv não foi fornecido, será utiizado o csv presente em ../docs/..
   
-
+#
 ## Execução dos testes unitários.
 ### 🗒️ Os testes unitário são executados utilizando-se do Junit e RestAssured para integração.
 - Na IDE de sua prefência com o projeto importado, executar os seguintes passos:
 - 1 Executar a aplicação, run `ApiTexoApplication.java`, aguarde a inicialização completa.
 - 2 Executar a classe de teste, run 'ApiTexoApplicationTest.java', os testes serão executados.
 
+#
 ## ☣️ Problemas conhecidos e possíveis soluções
 
 ### IDE IntelliJ build o projeto sobreecrevendo o build maven realizado manualmente
