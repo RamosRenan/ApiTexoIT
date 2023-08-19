@@ -10,8 +10,8 @@ Este é um projeto web desenvolvido com java com base no framework springboot e 
 - jdk11+
 
 ## Configurar o java e preparar o ambiente.
-- Para configurar o java no windows: Abra as as variaveis de ambiente e configure o par chave valor `JAVA_HOME`:`<local de instalação do java>`
-- Ex.:
+- Para configurar o java no windows: Abra as as variáveis de ambiente e configure o par chave valor `JAVA_HOME`:`<local de instalação do java>`.
+- Por exemplo:
   
   <p></p>
   
@@ -19,8 +19,8 @@ Este é um projeto web desenvolvido com java com base no framework springboot e 
   |---------|-------------------------------|
   |JAVA_HOE |  C:\Program Files\Java\jdk-11 |
 
-- Agora adicione o executavel java ao PATH (ainda nas váriaveis de ambiente)
-- Ex.:
+- Agora adicione o executável java ao PATH (ainda nas variáveis de ambiente).
+- Por exemplo:
   
     <p></p>
   
@@ -29,11 +29,16 @@ Este é um projeto web desenvolvido com java com base no framework springboot e 
   |PATH |  C:\Program Files\Java\jdk-11\bin |
 
 ### 1. Executando o projeto.
-ℹ️ Existem dois modos que o projeto poderá ser iniciado.
+ℹ️ Existem dois modos pelos quais o projeto poderá ser iniciado.
 
-### Modo 1: A partir de uma IDE. Ex: IntelliJ/eclipse
-- Para executar o projeto a partir de uma IDE basta importar o projeto para a IDE de sua escolha. O maven vai acompanhado do projeto.
-- Execute o comando: `<path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`.
+### Modo 1: A partir de uma IDE, Ex: IntelliJ / eclipse
+- Importe o projeto para a IDE de sua escolha.
+
+  &nbsp; Obs.: O maven acompanha o projeto.
+  
+- Execute o comando:
+
+`<path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`.
 
 ### 1.1 Agora e ainda na IDE basta executar o arquivo.
 run `ApiTexoApplication.java`.
