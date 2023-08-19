@@ -35,43 +35,43 @@ Tecnologias e ferramentas utilizadas no teste
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/d4265957-654f-4974-99d0-b56947c93685"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/b6509c33-e4bf-4db0-8514-8b426dc7e535"
+         alt="jasmine" width="130" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/c60f3e9b-4c18-4d56-a079-59f2b3901ba8"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/a5a0f4e3-6c70-4261-8246-154d78d8ef16"
+         alt="npm/node" width="130" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/843c1a43-6447-4d6f-b807-202eada549d0"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/979a8787-6399-42a7-9d3d-21c5e8d703e5"
+         alt="karma" width="130" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/5dd30116-c004-4ca2-add7-b443be1dad62"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/7a0861b9-f0cc-423f-ae26-8e5b20609e8a"
+         alt="junit" width="130" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/4e7e41f8-5cff-4e03-8f79-9929053ead0d"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/079ad7cd-935a-42b7-af1a-37ef1921fe91"
+         alt="spring boot" width="130" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/fba04284-ae7d-4399-ac23-9d4e64ddc567"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/247e6895-9944-43e5-b521-6fa07b2e6954"
+         alt="jpa" width="130" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/b18315ad-f6c0-4798-8559-b58db029b1c1"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/837599a0-29a2-41f7-8703-f9edead0bbbe"
+         alt="h2database" width="50" height="50">
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/f1f862b2-eaad-4bce-b735-9ddc12acff18"
-         alt="" width="130" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/9dc6c767-dd99-46fc-abbe-d48e4d0eae71"
+         alt="maven" width="130" height="50">
 </figure>
 
 # Contatos
