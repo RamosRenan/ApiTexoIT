@@ -6,14 +6,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import java.io.FileNotFoundException;
-import java.net.URISyntaxException;
+import static org.hamcrest.Matchers.hasItems;
+import static org.junit.jupiter.api.Assertions.*;
 import io.restassured.RestAssured.*;
 import		io.restassured.matcher.RestAssuredMatchers.*;
 import		org.hamcrest.Matchers.*;
-
 import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasItems;
-import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
 class ApiTexoApplicationTest
@@ -40,7 +38,6 @@ class ApiTexoApplicationTest
 
 	/**
 	 * Teste de integração
-	 *
 	 * Verifica o resultado da chamada a api na url /minAndMaxByDateMovie
 	 */
 	@Test
@@ -51,7 +48,6 @@ class ApiTexoApplicationTest
 
 	/**
 	 * Teste de integração
-	 *
 	 * Verifica o resultado da chamada a api na url /minAndMaxByDateMovie
 	 */
 	@Test
@@ -60,4 +56,29 @@ class ApiTexoApplicationTest
 		RestAssured.get("/minAndMaxByDateMovie").then().body("max.interval", hasItems(13));
 	}
 
+	/**
+	 *  Teste de integração
+	 *  Testando dados do ganhador que levou menos tempo entre dois prêmios ou mais
+	 */
+	@Test
+	public void verifyDataWinnerMin()
+	{
+		RestAssured.get("/minAndMaxByDateMovie").then().body("min[0].producer",	 	equalTo("Joel Silver"));
+		RestAssured.get("/minAndMaxByDateMovie").then().body("min[0].interval", 	equalTo(1));
+		RestAssured.get("/minAndMaxByDateMovie").then().body("min[0].previousWin", 	equalTo(1990));
+		RestAssured.get("/minAndMaxByDateMovie").then().body("min[0].followingWin", equalTo(1991));
+	}
+
+	/**
+	 *  Teste de integração
+	 *  Testando dados do ganhador que levou mais tempo entre dois prêmios ou mais
+	 */
+	@Test
+	public void verifyDataWinnerMax()
+	{
+		RestAssured.get("/minAndMaxByDateMovie").then().body("max[0].producer",	 	equalTo("Matthew Vaughn"));
+		RestAssured.get("/minAndMaxByDateMovie").then().body("max[0].interval", 	equalTo(13));
+		RestAssured.get("/minAndMaxByDateMovie").then().body("max[0].previousWin", 	equalTo(2002));
+		RestAssured.get("/minAndMaxByDateMovie").then().body("max[0].followingWin", equalTo(2015));
+	}
 }//class
