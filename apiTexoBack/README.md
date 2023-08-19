@@ -38,21 +38,23 @@ Este é um projeto web desenvolvido com java com base no framework springboot e 
   
 - Execute o comando:
 
-`<path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`.
+`<insira aqui o path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`.
 
-### 1.1 Agora e ainda na IDE basta executar o arquivo.
+### 1.1 Ainda na IDE execute o arquivo:
+
 run `ApiTexoApplication.java`.
 
-### 1.2 Realizando requisições http com metodo 'get'.
-- Abra o browser de sua preferência na url: `http://<localhost || ipv4>:8080/`
+### 1.2 Realize requisições http com metodo 'get'.
+- Abra o browser de sua preferência e digite a url: `http://<localhost || ipv4>:8080/`
 - As requisições para a API são atendidas no path:
   ### `/minAndMaxByDateMovie`.
 
-### 1.2 Apontar arquivo csv e alterar o domínio de entrada de dados.
-O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilzado para o teste. Este arquivo poderá ser alterado com outro arquivo csv com o ⚠️ **mesmo nome**.
-    <p></p>
-🗒️ `Em ../docs/.. Substitua o arquivo csv`  <p></p>
-📓 Para realizar os testes de integração considerando um cenário específico com dados de entrada (arquivo csv fornecido) aplicando uma lógica que possa atender dados de entrada difentes, mas pertecente ao mesmo escopo de natureza e domínio, espera-se que a lógica se mantenha resiliente e consistente para dados de entrada diferentes dos considerados. Arquivo csv fornecido. Logo para que seja possível realizar os testes de integração foi considerado este arquivo como modelo de dados de entrada. Para tanto embora que se espere a manutenção do funcionamento da aplicação as fases de teste poderão ser afetadas uma vez substituído este arquivo.
+### 1.2 Aponte o arquivo csv e altere o domínio de entrada de dados.
+🗒️ O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilizado para o teste. Este arquivo poderá ser substituído com outro arquivo csv de ⚠️ **mesmo nome**.
+   
+🗒️ `Em ../docs/.. Substitua o arquivo csv` 
+
+📓 Para realizar os testes de integração foi considerado um cenário específico a partir dos dados de entrada (arquivo csv fornecido). Foi aplicada uma lógica que possa atender diferentes dados de entrada, mas pertencentes ao mesmo escopo de natureza e domínio. Espera-se que a lógica se mantenha resiliente e consistente quando outro arquivo csv for fornecido ou substituído para servir como dados de entrada. Logo, para que fosse possível realizar os testes de integração, foi considerado este arquivo como modelo de dados de entrada. Sendo assim, as fases de teste poderão ser afetadas caso este arquivo seja substituído e uma nova etapa de testes seja realizada. 
 
 #
 ### Modo 2: A partir do .jar
