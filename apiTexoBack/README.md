@@ -18,14 +18,21 @@
 
 - Agora adicione o executavel java ao PATH (ainda nas váriaveis de ambiente)
 - Ex.:
-- 
+  
     <p></p>
   
   |chave    |  valor                        |
   |---------|-------------------------------|
   |PATH |  C:\Program Files\Java\jdk-11\bin |
-  
-executar o maven 
+
+# Executando o projeto 
+Existem dois modos que o projeto poderá ser iniciado
+- Modo 1: A partir de uma IDE. Ex: IntelliJ/eclipse
+Para executar o projeto a partir de uma IDE basta importar o projeto para a IDE de sua escolha. O maven vai acompanhado do projeto.
+- Execute o comando: `<path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`
+
+## Executar o maven no projeto
+
 
 como executar o jar
 
