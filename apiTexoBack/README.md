@@ -63,7 +63,7 @@ Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-
       <p></p>
   &nbsp;&nbsp;&nbsp;&nbsp; execute: `java -jar apiTexo-0.0.1-SNAPSHOT.jar <forneça o path absoluto do arquivo csv >(opcional)`.
      <p></p>
-  &nbsp;&nbsp;&nbsp;&nbsp; 📓 Se o path do csv não foi fornecido, será utiizado o csv presente em ../docs/..
+  &nbsp;&nbsp;&nbsp;&nbsp; 📓 Se o path do csv não foi fornecido, será utilizado o csv presente em ../docs/..
   
 #
 ## 3. Execução dos testes unitários.
@@ -75,7 +75,7 @@ Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-
 #
 ## ☣️ Problemas conhecidos e possíveis soluções:
 
-### IDE IntelliJ build o projeto sobreecrevendo o build maven realizado manualmente
+### IDE IntelliJ build o projeto sobrescrevendo o build maven realizado manualmente
 - Problema: *org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.br.texo.apitexo.ApiTexoApplication]; nested exception is java.io.FileNotFoundException: class path resource [config.properties] cannot be opened because it does not exist*
   
 - Solução:
