@@ -6,7 +6,7 @@
 # Versão do Java
 - jdk11+
 
-# Configurar o java
+# Configurar o java e preparar o ambiente
 - Para configurar o java no windows: Abra as as variaveis de ambiente e configure o par chave valor `JAVA_HOME`:`<local de instalação do java>`
 - Ex.:
   
@@ -26,13 +26,13 @@
   |PATH |  C:\Program Files\Java\jdk-11\bin |
 
 # 1. Executando o projeto 
-Existem dois modos que o projeto poderá ser iniciado
+ℹ️ Existem dois modos que o projeto poderá ser iniciado
 
 ## Modo 1: A partir de uma IDE. Ex: IntelliJ/eclipse
 - Para executar o projeto a partir de uma IDE basta importar o projeto para a IDE de sua escolha. O maven vai acompanhado do projeto.
 - Execute o comando: `<path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`
 
-## 1.1 Configuração do arquivo csv
+## 1.1 Apontar arquivo csv
 O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilzado para o teste. Este arquivo poderá ser alterado com outro arquivo csv com o ⚠️ **mesmo nome**
     <p></p>
 🗒️ `Em ../docs/.. Substitua o arquivo csv`  <p></p>
