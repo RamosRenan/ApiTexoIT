@@ -31,7 +31,7 @@ Este é um projeto web desenvolvido com java com base no framework springboot e 
 ### 1. Executando o projeto.
 ℹ️ Existem dois modos pelos quais o projeto poderá ser iniciado.
 
-### Modo 1: A partir de uma IDE, Ex: IntelliJ / eclipse
+### Modo 1.1: A partir de uma IDE, Ex: IntelliJ / eclipse
 - Importe o projeto para a IDE de sua escolha.
 
   &nbsp; Obs.: O maven acompanha o projeto.
@@ -40,16 +40,16 @@ Este é um projeto web desenvolvido com java com base no framework springboot e 
 
 `<insira aqui o path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`.
 
-### 1.1 Ainda na IDE execute o arquivo:
+### 1.1.1 Ainda na IDE execute o arquivo:
 
 run `ApiTexoApplication.java`.
 
-### 1.2 Realize requisições http com metodo 'get'.
+### 1.1.2 Realize requisições http com metodo 'get'.
 - Abra o browser de sua preferência e digite a url: `http://<localhost || ipv4>:8080/`
 - As requisições para a API são atendidas no path:
   ### `/minAndMaxByDateMovie`.
 
-### 1.2 Aponte o arquivo csv e altere o domínio de entrada de dados.
+### 1.1.3 Aponte o arquivo csv e altere o domínio de entrada de dados.
 🗒️ O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilizado para o teste. Este arquivo poderá ser substituído com outro arquivo csv de ⚠️ **mesmo nome**.
    
 🗒️ `Em ../docs/.. Substitua o arquivo csv` 
@@ -57,7 +57,7 @@ run `ApiTexoApplication.java`.
 📓 Para realizar os testes de integração foi considerado um cenário específico a partir dos dados de entrada (arquivo csv fornecido). Foi aplicada uma lógica que possa atender diferentes dados de entrada, mas pertencentes ao mesmo escopo de natureza e domínio. Espera-se que a lógica se mantenha resiliente e consistente quando outro arquivo csv for fornecido ou substituído para servir como dados de entrada. Logo, para que fosse possível realizar os testes de integração, foi considerado este arquivo como modelo de dados de entrada. Sendo assim, as fases de teste poderão ser afetadas caso este arquivo seja substituído e uma nova etapa de testes seja realizada. 
 
 #
-### Modo 2: A partir do .jar
+### Modo 1.2: A partir do .jar
 Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-SNAPSHOT` (projeto compilado)
 - Certifique-se de que o JAVA_HOME foi apontado nas variáveis de ambiente.
       <p></p>
@@ -66,29 +66,29 @@ Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-
   &nbsp;&nbsp;&nbsp;&nbsp; 📓 Se o path do csv não foi fornecido, será utiizado o csv presente em ../docs/..
   
 #
-## Execução dos testes unitários.
+## 3. Execução dos testes unitários.
 ### 🗒️ Os testes unitário são executados utilizando-se do Junit e RestAssured para integração.
-- Na IDE de sua prefência com o projeto importado, executar os seguintes passos:
-- 1 Executar a aplicação, run `ApiTexoApplication.java`, aguarde a inicialização completa.
-- 2 Executar a classe de teste, run 'ApiTexoApplicationTest.java', os testes serão executados.
+- Na IDE de sua preferência com o projeto importado, execute os seguintes passos:
+- 1 Execute a aplicação, run `ApiTexoApplication.java`, e aguarde a inicialização completa.
+- 2 Execute a classe de teste, run 'ApiTexoApplicationTest.java', e os testes serão executados.
 
 #
-## ☣️ Problemas conhecidos e possíveis soluções
+## ☣️ Problemas conhecidos e possíveis soluções:
 
 ### IDE IntelliJ build o projeto sobreecrevendo o build maven realizado manualmente
 - Problema: *org.springframework.beans.factory.BeanDefinitionStoreException: Failed to parse configuration class [com.br.texo.apitexo.ApiTexoApplication]; nested exception is java.io.FileNotFoundException: class path resource [config.properties] cannot be opened because it does not exist*
   
 - Solução:
-- 1 Botão direito do mouse sobre o projeto
-- Selecionar project settings
-- Selecionar Modules
-- Desmarcar para deletar a pasta target
-- Excluir a pasta **target** e executar o maven novamente
+1. Clique com o botão direito do mouse sobre o projeto
+2. Selecione project settings
+3. Selecione Modules
+4. Desmarque para deletar a pasta target
+5. Exclua a pasta **target** e execute o maven novamente
  
-### Execução dos testes falham ao executa-los na IDE IntelliJ
+### Execução dos testes falham ao executá-los na IDE IntelliJ
 - Solução: 
-- 1 Botão direito do mouse sobre o projeto
-- Selecinar project settings
-- Selecionar Libraries
-- Excluir: Maven: org.apache.groovy:groovy-xml:4.0.112, Maven: org.apache.groovy:groovy:4.0.112
+1. Clique com o botão direito do mouse sobre o projeto
+2. Selecione project settings
+3. Selecione Libraries
+4. Exclua: Maven: org.apache.groovy:groovy-xml:4.0.112 e Maven: org.apache.groovy:groovy:4.0.112
 
