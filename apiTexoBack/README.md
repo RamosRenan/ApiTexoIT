@@ -73,7 +73,7 @@ Neste projeto foi fornecido um compilado .jar para ser executado `apiTexo-0.0.1-
   
 - Solução:
 - 1 Botão direito do mouse sobre o projeto
-- Selecinar project settings
+- Selecionar project settings
 - Selecionar Modules
 - Desmarcar para deletar a pasta target
 - Excluir a pasta **target** e executar o maven novamente
