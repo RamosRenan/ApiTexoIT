@@ -1,5 +1,5 @@
 # ApiTexoIT
-api teste texto
+Projeto Full Stack API RestFull and FrontAnd
 
 ## Documentação Front End: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
 ## Documentação Back End: https://github.com/RamosRenan/ApiTextoIT/blob/main/apiTexoBack/README.md
