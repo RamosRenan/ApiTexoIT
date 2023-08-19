@@ -26,8 +26,8 @@ Tecnologias e ferramentas utilizadas no teste
 
 # Tecnologias utilizadas
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/8aee0774-d2c1-49bd-9242-77f0effca419"
-         alt="" width="50" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/f4eb2cfe-1bf3-4d1b-b442-ddb86a7ed5c2"
+         alt="angular" width="50" height="50">
 </figure>
 
 <figure>
