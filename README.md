@@ -30,8 +30,8 @@ Tecnologias e ferramentas utilizadas no teste
 </figure>
 
 <figure>
-    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/0ca0de2a-4e07-4f37-8df9-2dc0e1ddceb8"
-         alt="" width="50" height="50">
+    <img src="https://github.com/RamosRenan/ApiTextoIT/assets/33878976/67803f87-d0dc-48d0-8cc0-17dcfd858bb0"
+         alt="angular material" width="50" height="50">
 </figure>
 
 <figure>
