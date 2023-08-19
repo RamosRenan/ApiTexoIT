@@ -15,6 +15,15 @@
   |chave    |  valor                        |
   |---------|-------------------------------|
   |JAVA_HOE |  C:\Program Files\Java\jdk-11 |
+
+- Agora adicione o executavel java ao PATH (ainda nas váriaveis de ambiente)
+- Ex.:
+- 
+    <p></p>
+  
+  |chave    |  valor                        |
+  |---------|-------------------------------|
+  |PATH |  C:\Program Files\Java\jdk-11\bin |
   
 executar o maven 
 
