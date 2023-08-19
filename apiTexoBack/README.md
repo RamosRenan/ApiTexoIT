@@ -1,7 +1,7 @@
 # 🗞️ Documentação Back End.
 
 ## ✒️ Introdução.
-Este é um projeto web desenvolvido com java sobre o framework springboot utilizando com database embarcada H2Database. Para gerêncimento das transações e persistência em banco foi utilizado as interfaces do JPA com hibernate. Trata-se de um projeto com a finalidade de API restfull.
+Este é um projeto web desenvolvido com java com base no framework springboot e utiliza o gerenciador de bancos H2Database. Para gerenciamento das transações e persistência em banco foram utilizadas as interfaces da JPA com hibernate. Trata-se de um projeto com a finalidade de servir através de API restfull filmes e produtores premiados.
 
 ## Sistema Operacional.
 - Recomendado 8GB ram
