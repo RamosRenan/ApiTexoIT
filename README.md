@@ -1,4 +1,4 @@
-# ApiTextoIT
+# ApiTexoIT
 api teste texto
 
 ## Documentação Front End: https://github.com/RamosRenan/ApiTextoIT/blob/main/texoITFront/README.md
