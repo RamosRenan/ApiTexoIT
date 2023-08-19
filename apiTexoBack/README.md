@@ -32,7 +32,7 @@ Existem dois modos que o projeto poderá ser iniciado
 - Execute o comando: `<path onde esta localizado o projeto>\ApiTextoIT\apiTexoBack\maven\bin\mvn -X clean package -DskipTests=true`
 
 ## Configuração do arquivo csv
-O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilzado para o teste. E arquivo poderá ser altera com outro arquivo csv com o *mesmo nome*
+O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilzado para o teste. E arquivo poderá ser altera com outro arquivo csv com o ⚠️ **mesmo nome**
 
 ## Executar o maven no projeto
 
