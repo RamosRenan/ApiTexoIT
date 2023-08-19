@@ -1,5 +1,8 @@
 # Documentação Back End
 
+# ✒️ Introdução 
+Este é um projeto web desenvolvido com java sobre o framework springboot utilizando com database embarcada H2Database. Para gerêncimento das transações e persistência em banco foi utilizado as interfaces do JPA com hibernate. Trata-se de um projeto com a finalidade de API restfull.
+
 # Sistema Operacional
 - Recomendado 8GB ram
 
@@ -34,6 +37,11 @@
 
 ## 1.1 Agora e ainda na IDE basta executar o arquivo 
 run `ApiTexoApplication.java`
+
+## 1.2 Realizando requisições http com metodo 'get'
+- Abra o browser de sua preferência na url: `http://<localhost || ipv4>:8080/`
+- As requisições para a API são atendidas no path:
+  ### `/minAndMaxByDateMovie`
 
 ## 1.2 Apontar arquivo csv e alterar o domínio de entrada de dados 
 O projeto acompanha um folder chamado docs, nele se encontra o arquivo default disponibilzado para o teste. Este arquivo poderá ser alterado com outro arquivo csv com o ⚠️ **mesmo nome**
